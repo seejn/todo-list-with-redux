@@ -13,7 +13,7 @@ This file defines action types and action creators. Action types (ADD_TODO, DELE
 
 This file defines the reducer function. The reducer is a pure function that takes the current state and an action, and returns a new state based on that action.
 
-initialState: Defines the initial state of the application, which includes an empty array for todos.
+- initialState: Defines the initial state of the application, which includes an empty array for todos.
 - reducer: Handles different action types and returns a new state accordingly.
 - For ADD_TODO, it adds a new task to the todos array with a unique ID generated using Date.now().
 - For DELETE_TODO, it checks if the task is completed and if yes filters out the task with the given ID from the todos array.
@@ -23,15 +23,11 @@ initialState: Defines the initial state of the application, which includes an em
 ## index.js
 
 This file sets up the Redux store, subscribes to changes in the store, and connects the UI to Redux actions.
-
-store: Creates a Redux store with the todoReducer.
-
-render: Renders the UI based on the current state of the store. It retrieves the todos from the store's state and updates the DOM accordingly.
-
-store.subscribe(render): Subscribes to changes in the store, so that the render function is called whenever the state changes.
-
-addTodoButton and todoInput: References to HTML elements for adding todos.
-Event listeners are attached to addTodoButton to dispatch addTodo action when clicked, to elements (todos) to dispatch deleteTodo action when clicked and updateTodo when double clicked and to checkbox to toggleTodo action when checked.
+- store: Creates a Redux store with the todoReducer.
+- render: Renders the UI based on the current state of the store. It retrieves the todos from the store's state and updates the DOM accordingly.
+- store.subscribe(render): Subscribes to changes in the store, so that the render function is called whenever the state changes.
+- addTodoButton and todoInput: References to HTML elements for adding todos.
+- Event listeners are attached to addTodoButton to dispatch addTodo action when clicked, to elements (todos) to dispatch deleteTodo action when clicked and updateTodo when double clicked and to checkbox to toggleTodo action when checked.
 
 ## How It Works
 
