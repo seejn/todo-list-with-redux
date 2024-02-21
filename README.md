@@ -2,7 +2,8 @@
 
 ## actions.js
 
-This file defines action types and action creators. Action types (ADD_TODO and DELETE_TODO) are string constants that represent the type of action being performed. Action creators (addTodo and deleteTodo) are functions that return action objects.
+This file defines action types and action creators. Action types (ADD_TODO and DELETE_TODO) are string constants that represent the type of action being performed. Action creators (addTodo, deleteTodo, updateTodo and toggleTodo) are functions that return action objects.
+
 
 addTodo: Creates an action object with type ADD_TODO and a payload containing the task to be added.
 deleteTodo: Creates an action object with type DELETE_TODO and a payload containing the ID of the task to be deleted.
