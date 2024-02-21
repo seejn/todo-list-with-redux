@@ -2,24 +2,23 @@
 
 ## actions.js
 
-This file defines action types and action creators. Action types (ADD_TODO and DELETE_TODO) are string constants that represent the type of action being performed. Action creators (addTodo, deleteTodo, updateTodo and toggleTodo) are functions that return action objects.
+This file defines action types and action creators. Action types (ADD_TODO, DELETE_TODO, UPDATE_TODO and TOGGLE_TODO) are string constants that represent the type of action being performed. Action creators (addTodo, deleteTodo, updateTodo and toggleTodo) are functions that return action objects.
 
-
-addTodo: Creates an action object with type ADD_TODO and a payload containing the task to be added.
-deleteTodo: Creates an action object with type DELETE_TODO and a payload containing the ID of the task to be deleted.
-updateTodo: Creates an action object with type UPDATE_TODO and a payload containing the ID of the task to be updated and task to update with.
-toggleTodo: Creates an action object with type TOGGLE_TODO and a payload containing the ID of the task to toggle task completed.
+- addTodo: Creates an action object with type ADD_TODO and a payload containing the task to be added.
+- deleteTodo: Creates an action object with type DELETE_TODO and a payload containing the ID of the task to be deleted.
+- updateTodo: Creates an action object with type UPDATE_TODO and a payload containing the ID of the task to be updated and task to update with.
+- toggleTodo: Creates an action object with type TOGGLE_TODO and a payload containing the ID of the task to toggle task completed.
 
 ## reducer.js
 
 This file defines the reducer function. The reducer is a pure function that takes the current state and an action, and returns a new state based on that action.
 
 initialState: Defines the initial state of the application, which includes an empty array for todos.
-reducer: Handles different action types and returns a new state accordingly.
-For ADD_TODO, it adds a new task to the todos array with a unique ID generated using Date.now().
-For DELETE_TODO, it checks if the task is completed and if yes filters out the task with the given ID from the todos array.
-For UPDATE_TODO, it maps the todos and match the todo with given id then updates with newTask and returns new todos
-For TOGGLE_TODO, it maps the todos and match the todo with given id then toggles the completed status
+- reducer: Handles different action types and returns a new state accordingly.
+- For ADD_TODO, it adds a new task to the todos array with a unique ID generated using Date.now().
+- For DELETE_TODO, it checks if the task is completed and if yes filters out the task with the given ID from the todos array.
+- For UPDATE_TODO, it maps the todos and match the todo with given id then updates with newTask and returns new todos
+- For TOGGLE_TODO, it maps the todos and match the todo with given id then toggles the completed status
 
 ## index.js
 
