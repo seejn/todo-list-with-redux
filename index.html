@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+</head>
+<body>
+    <h3>My To Do List:</h3>
+    <h4>Instructions: </h4>
+    <ul>
+        <li>Add Todo: Type in input field and hit "Add Todo" button</li>
+        <li>Remove Todo: Check todo then double click todo</li>
+        <li>Update Todo: Single click</li>
+    </ul>
+  <div id="app">
+    <input id="todo-input" type="text" placeholder="Add new todo">
+    <button id="add-todo-btn">Add Todo</button>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.2/redux.min.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
