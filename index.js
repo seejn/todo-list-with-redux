@@ -7,10 +7,10 @@ const store = createStore(todoReducer)
 const render = () => {
     const todoList = document.getElementById('todo-list');
     const todos = store.getState().todos;
-
+    
     todoList.innerHTML = '';
     todos.forEach(todo => {
-
+        
         const item = document.createElement('div')
         const checkbox = document.createElement('input');
         const label = document.createElement('label');
@@ -40,7 +40,7 @@ const render = () => {
 
 const displayState = () => {
     const todos = store.getState().todos;
-    console.log("updated todos:", todos)
+    console.log("inside displayState updated todos:", todos)
 }
 
 store.subscribe(render)
