@@ -11,23 +11,18 @@ export default function reducer(state = initialState, action){
         }
 
         case DELETE_TODO:
-            const findTodo = state.todos.find(todo => todo.id === action.payload.id);
-            const newTodos = !findTodo.completed ? 
-                {
-                    ...state,
-                }:
-                {
-                    ...state,
-                    todos: state.todos.filter((todo) => todo.id !== action.payload.id)
-                }
-            return newTodos;
+            const notCompletedTodos = state.todos.filter(todo => !todo.completed);
+        
+            const completedTodos = state.todos.filter(todo => todo.completed);
+            const filteredTodos = completedTodos.filter(todo => todo.id !== action.payload.id); 
+
+            return {...state, todos: [...filteredTodos, ...notCompletedTodos]};
 
         case TOGGLE_TODO: return {
             ...state,
             todos: state.todos.map((todo) => {
-                if(todo.id === action.payload.id){
-                    return { ...todo, completed: !todo.completed}
-                } 
+                if(todo.id === action.payload.id) return { ...todo, completed: !todo.completed}
+                else return todo
             })
         }
 
